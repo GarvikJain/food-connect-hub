@@ -9,8 +9,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "How It Works", path: "/#how-it-works" },
-    { name: "About", path: "/#about" },
+    { name: "Donate Food", path: "/donate-food" },
+    { name: "Find Food", path: "/find-food" },
+    { name: "How It Works", path: "/how-it-works" },
+    { name: "About", path: "/about" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -45,10 +47,10 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <Button variant="ghost" asChild>
-              <Link to="/donor">Donor Login</Link>
+              <Link to="/login">Login</Link>
             </Button>
             <Button variant="default" asChild>
-              <Link to="/recipient" className="flex items-center gap-2">
+              <Link to="/register" className="flex items-center gap-2">
                 <Heart className="w-4 h-4" />
                 Get Started
               </Link>
@@ -84,10 +86,10 @@ const Navbar = () => {
               ))}
               <div className="flex flex-col gap-2 mt-4 px-4">
                 <Button variant="outline" asChild className="w-full">
-                  <Link to="/donor">Donor Login</Link>
+                  <Link to="/login">Login</Link>
                 </Button>
                 <Button variant="default" asChild className="w-full">
-                  <Link to="/recipient">Get Started</Link>
+                  <Link to="/register">Get Started</Link>
                 </Button>
               </div>
             </div>
